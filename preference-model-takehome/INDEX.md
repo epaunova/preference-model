@@ -55,16 +55,6 @@ An RL training task where language models learn to:
 
 ---
 
-##  Quick Stats
-
-- **Time spent:** ~4 hours
-- **Code:** ~300 lines (including tests, grader, docs)
-- **Dependencies:** numpy only
-- **Difficulty:** Calibrated for 10-40% pass rate
-- **Task type:** Debugging + mathematical reasoning
-
----
-
 
 ##  Questions?
 
