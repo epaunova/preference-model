@@ -38,7 +38,6 @@ Result: PASSED
 preference-model-takehome/
 ├── variance_dropout_task.py    # Main task (everything in one file)
 ├── README.md                   # Full documentation
-├── SUBMISSION_SUMMARY.md       # Quick overview
 ├── CHECKLIST.md                # Requirements verification
 ├── requirements.txt            # Dependencies
 └── QUICKSTART.md              # This file
@@ -47,7 +46,6 @@ preference-model-takehome/
 ## For Reviewers
 
 ### Quick Review (5 min)
-1. Read `SUBMISSION_SUMMARY.md` - understand the task
 2. Run `python variance_dropout_task.py` - see it work
 3. Check difficulty calibration in output
 
@@ -99,6 +97,5 @@ print(f"Feedback: {result['feedback']}")
 
 See:
 - **Full docs:** `README.md`
-- **Quick overview:** `SUBMISSION_SUMMARY.md`  
 - **Requirements check:** `CHECKLIST.md`
 
