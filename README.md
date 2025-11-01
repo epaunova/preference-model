@@ -23,14 +23,14 @@ The clear reward signal (43% error → fail, 0.1% error → pass) enables effect
 
 ## Why This Task is Effective
 
-### 1. **Scientific Concept** (Pro Tip #1) 
+### 1. **Scientific Concept** 
 The task teaches variance stabilization in neural networks - a real research concept that:
 - Addresses gradient stability issues in deep learning
 - Requires understanding of statistical moments (mean vs variance)
 - Shows how small mathematical changes have big practical impacts
 - Connects theory (paper concept) to implementation (code)
 
-### 2. **Clear Difficulty Targeting (10-40%)** (Pro Tip #4) 
+### 2. **Clear Difficulty Targeting (10-40%)** 
 The bug is subtle enough that models will struggle:
 - **Weak models (0-10%):** May not understand the math or make random changes
 - **Medium models (15-30%):** Understand the concept but make implementation errors
@@ -45,14 +45,14 @@ Models fail for different reasons:
 - Not handling edge cases (eval mode, zero dropout rate)
 - Changing the test file instead of implementation
 
-### 4. **Tool Usage** (Pro Tip #2) 
+### 4. **Tool Usage** 
 The task requires:
 - Code execution (running tests)
 - Statistical validation (checking variance empirically)
 - Debugging skills (identifying the bug location)
 - Mathematical reasoning (deriving correct scaling factor)
 
-### 5. **Clean Grading** (Pro Tip #5) 
+### 5. **Clean Grading** 
 The grader precisely checks:
 - Statistical tests pass (variance within 10% tolerance)
 - Eval mode works (identity function)
