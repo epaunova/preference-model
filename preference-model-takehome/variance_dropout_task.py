@@ -29,24 +29,24 @@ variance in activations that can slow convergence. The paper proposes a simple f
 - Randomly mask each unit with probability p
 - Scale surviving units by 1/(1-p) to maintain expected value
 - Formula: output = input * mask / (1-p)
-- Problem: Var(output) != Var(input) even though E[output] = E[input]
+- Problem: Var(output) ≠ Var(input) even though E[output] = E[input]
 
 **Variance-Stabilized Dropout:**
 - Still mask with probability p  
-- But scale by 1/sqrt(1-p) instead of 1/(1-p)
+- But scale by 1/√(1-p) instead of 1/(1-p)
 - This preserves BOTH mean AND variance
 - Result: More stable gradients, faster convergence
 
 **Mathematical Proof:**
-For input X with Var(X) = sigma^2:
+For input X with Var(X) = σ²:
 - Let M ~ Bernoulli(1-p) be the dropout mask
 - Standard dropout: Y = X * M / (1-p)
-  - E[Y] = E[X] (mean preserved)
-  - Var(Y) = sigma^2 * (1-p) / (1-p)^2 = sigma^2 / (1-p) (variance inflated!)
+  - E[Y] = E[X](preserved) (mean preserved)
+  - Var(Y) = σ² * (1-p) / (1-p)² = σ² / (1-p)(inflated) (variance inflated!)
   
-- Variance-stabilized: Y = X * M / sqrt(1-p)
-  - E[Y] = E[X] * (1-p) / sqrt(1-p) = E[X] * sqrt(1-p) (mean scaled by sqrt(1-p))
-  - Var(Y) = sigma^2 * (1-p) / (1-p) = sigma^2 (variance preserved!)
+- Variance-stabilized: Y = X * M / √(1-p)
+  - E[Y] = E[X] * (1-p) / √(1-p) = E[X] * √(1-p) (mean scaled by √(1-p))
+  - Var(Y) = σ² * (1-p) / (1-p) = σ²(preserved) (variance preserved!)
 
 Wait, the mean isn't preserved exactly... but variance IS preserved, which is what matters for 
 gradient stability. The slight mean scaling is typically absorbed by batch normalization or learned biases.
@@ -383,8 +383,8 @@ class VarianceStabilizedDropout:
         mask = np.random.binomial(1, keep_prob, size=x.shape)
         
         # FIXED: Use sqrt scaling to preserve variance
-        # Variance = sigma^2 * (1-p) * scale^2
-        # For Variance = sigma^2, we need: (1-p) * scale^2 = 1
+        # Variance = σ² * (1-p) * scale²
+        # For Variance = σ², we need: (1-p) * scale² = 1
         # Therefore: scale = 1/sqrt(1-p)
         scale = 1.0 / np.sqrt(keep_prob)
         
@@ -440,10 +440,3 @@ if __name__ == "__main__":
         if result['output']:
             print("\nOutput:")
             print(result['output'])
-```
-
----
-
-## FILE 2: requirements.txt
-```
-numpy>=1.20.0
