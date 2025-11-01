@@ -244,14 +244,6 @@ The task is calibrated for 10-40% success rate through:
  **Balanced difficulty** - 10-40% calibrated through subtle math bug  
  **Precise grading** - Automated tests, no ambiguity  
 
-## Time Spent Breakdown
-
-- **Concept Selection:** 45 min (reviewed research concepts, selected dropout)
-- **Task Design:** 1 hour (prompt, bug design, test cases)
-- **Implementation:** 1.5 hours (buggy/correct versions, grader, tests)
-- **Testing & Validation:** 45 min (verified difficulty, edge cases)
-- **Documentation:** 30 min (README, comments, examples)
-- **Total:** ~4 hours
 
 ## Files Included
 
