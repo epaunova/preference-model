@@ -1,31 +1,27 @@
 # RL Task Submission: Variance-Stabilized Dropout Implementation
 
-**Candidate:** Eva Paunova, AI Research Scientist 
-
+**Candidate:** Eva Paunova, AI Research Scientist   
 **Date:** October 31, 2025  
-
+**Time Spent:** ~4 hours
 
 ## Task Overview
 
 This submission contains an RL task for ML researcher/engineer training that teaches models to:
 - Understand and implement techniques from research papers
-- Fix a subtle mathematical bug in dropout implementation
-- Using 1/(1-p) scaling instead of 1/sqrt(1-p)
-- 10-40% pass rate (requires mathematical reasoning)
 - Debug subtle mathematical errors in ML code
 - Apply statistical validation to neural network components
 - Reason about variance and gradient stability
 
 ## Why This Task is Effective
 
-### 1. **Scientific Concept** 
+### 1. **Scientific Concept** (Pro Tip #1) 
 The task teaches variance stabilization in neural networks - a real research concept that:
 - Addresses gradient stability issues in deep learning
 - Requires understanding of statistical moments (mean vs variance)
 - Shows how small mathematical changes have big practical impacts
 - Connects theory (paper concept) to implementation (code)
 
-### 2. **Clear Difficulty Targeting (10-40%)** 
+### 2. **Clear Difficulty Targeting (10-40%)** (Pro Tip #4) 
 The bug is subtle enough that models will struggle:
 - **Weak models (0-10%):** May not understand the math or make random changes
 - **Medium models (15-30%):** Understand the concept but make implementation errors
@@ -40,14 +36,14 @@ Models fail for different reasons:
 - Not handling edge cases (eval mode, zero dropout rate)
 - Changing the test file instead of implementation
 
-### 4. **Tool Usage** 
+### 4. **Tool Usage** (Pro Tip #2) 
 The task requires:
 - Code execution (running tests)
 - Statistical validation (checking variance empirically)
 - Debugging skills (identifying the bug location)
 - Mathematical reasoning (deriving correct scaling factor)
 
-### 5. **Clean Grading** 
+### 5. **Clean Grading** (Pro Tip #5) 
 The grader precisely checks:
 - Statistical tests pass (variance within 10% tolerance)
 - Eval mode works (identity function)
@@ -81,17 +77,17 @@ scale = 1.0 / np.sqrt(keep_prob)  # Preserves variance!
 **Why it matters:**
 - Var(output) = Var(input) × (1-p) × scale²
 - For Var(output) = Var(input), need: (1-p) × scale² = 1
-- Therefore: scale = 1/√(1-p) ✓
+- Therefore: scale = 1/√(1-p) 
 
 ## Pass/Fail Criteria
 
 **The task passes if:**
-- `dropout.py` modified with correct scaling factor
-- Variance preserved within 10% across dropout rates (0.3, 0.5, 0.7)
-- Eval mode returns identity (no dropout)
-- Training mode actually drops ~p% of units
-- Test file not modified
-- Implementation contains sqrt/0.5/power
+-  `dropout.py` modified with correct scaling factor
+-  Variance preserved within 10% across dropout rates (0.3, 0.5, 0.7)
+-  Eval mode returns identity (no dropout)
+-  Training mode actually drops ~p% of units
+-  Test file not modified
+-  Implementation contains sqrt/0.5/power
 
 **Common failure modes:**
 - Using 1/p or 1/(1-p) instead of 1/sqrt(1-p)
@@ -215,11 +211,11 @@ The task is calibrated for 10-40% success rate through:
 - **Fixable:** Single-line change, but requires understanding
 
 ### Alignment with Requirements
-**Scientific concept** - Variance stabilization in neural nets  
-**Tool usage** - Code execution, statistical testing  
-**Coherent** - Single clear objective with measurable outcome  
-**Balanced difficulty** - 10-40% calibrated through subtle math bug  
-**Precise grading** - Automated tests, no ambiguity  
+ **Scientific concept** - Variance stabilization in neural nets  
+ **Tool usage** - Code execution, statistical testing  
+ **Coherent** - Single clear objective with measurable outcome  
+ **Balanced difficulty** - 10-40% calibrated through subtle math bug  
+ **Precise grading** - Automated tests, no ambiguity  
 
 ## Time Spent Breakdown
 
@@ -280,3 +276,4 @@ If you have questions about this submission, I'm happy to discuss:
 - Integration approaches  
 - Alternative variations
 
+Good luck with the RL training data collection!
