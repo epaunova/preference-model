@@ -2,8 +2,6 @@
 
 ## Requirements Verification
 
-### From Take-Home Assignment Document
-
 - [x] **Task creates an RL task for LLM training**
   - Dropout implementation with buggy code to fix
   
