@@ -6,7 +6,6 @@
 ##  Start Here
 
 **New to this submission?** - Read `QUICKSTART.md` (2 min)  
-**Want quick overview?** - Read `SUBMISSION_SUMMARY.md` (5 min)  
 **Need full details?** - Read `README.md` (15 min)
 
 **To run the task:**
@@ -26,12 +25,9 @@ python variance_dropout_task.py
 
 ### Supporting Documentation
 - **QUICKSTART.md** - How to run and integrate (5 min read)
-- **SUBMISSION_SUMMARY.md** - One-page overview (3 min read)
 - **TESTING_RESULTS.md** - Comprehensive test results and validation (10 min read)
 - **TECHNICAL_DESIGN.md** - Deep-dive technical documentation
 - **CHECKLIST.md** - Verification against requirements
-- **SUBMISSION_MESSAGE.md** - Email template for submission
-- **DEMO_SCRIPT.md** - Presentation guide if doing live demo
 - **INDEX.md** - This file
 
 ---
@@ -69,32 +65,11 @@ An RL training task where language models learn to:
 
 ---
 
-##  For Reviewers
-
-### 5-Minute Review
-1. Read `SUBMISSION_SUMMARY.md`
-2. Run `python variance_dropout_task.py`
-3. Watch buggy fail (43% error) - correct pass (0.1% error)
-
-### 15-Minute Review
-1. Read `README.md` sections on difficulty calibration
-2. Review task prompt in code
-3. Check grading logic
-4. Verify against `CHECKLIST.md`
-
-### Integration
-- See `QUICKSTART.md` for code examples
-- Task is self-contained in single file
-- Easy to adapt for different model APIs
-
----
-
 
 ##  Questions?
 
 Check:
 - Technical details - `README.md`
-- Quick answers - `SUBMISSION_SUMMARY.md`
 - Integration - `QUICKSTART.md`
 - Requirements - `CHECKLIST.md`
 
