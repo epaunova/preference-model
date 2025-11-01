@@ -55,6 +55,6 @@ CORRECT VERSION:
 
 3. **requirements.txt** (numpy only)
 
-### Time: ~4 hours
+### 
 
 Run `python variance_dropout_task.py` to see it in action!
