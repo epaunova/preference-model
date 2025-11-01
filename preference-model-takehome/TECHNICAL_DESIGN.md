@@ -1,10 +1,8 @@
 # Technical Design Document
 ## Variance-Stabilized Dropout: RL Task Implementation
 
-**Author:** AI Research Scientist (RL Background)  
-**Date:** November 1, 2025  
-**Time Investment:** 4 hours  
-**Target Role:** RL Environments Engineer @ Preference Model
+**Author:** Eva Paunova, AI Research Scientist   
+**Date:** October 31, 2025  
 
 ---
 
@@ -298,7 +296,6 @@ except subprocess.TimeoutExpired:
 |----------|---------|--------|
 | README.md | Full design rationale | 9.5 KB |
 | QUICKSTART.md | Integration guide | 3 KB |
-| SUBMISSION_SUMMARY.md | Quick overview | 2 KB |
 | CHECKLIST.md | Requirements verification | 3.5 KB |
 | INDEX.md | Navigation | 4 KB |
 | This document | Technical deep-dive | 15+ KB |
@@ -432,9 +429,7 @@ preference-model-takehome/
 ├── README.md                      # Full documentation (9.5 KB)
 ├── TECHNICAL_DESIGN.md            # This document (15+ KB)
 ├── QUICKSTART.md                  # Integration guide (3 KB)
-├── SUBMISSION_SUMMARY.md          # Quick overview (2 KB)
 ├── CHECKLIST.md                   # Requirements check (3.5 KB)
-├── SUBMISSION_MESSAGE.md          # Email template (2.5 KB)
 ├── DEMO_SCRIPT.md                 # Presentation guide (3.5 KB)
 ├── INDEX.md                       # Navigation (4 KB)
 └── requirements.txt               # Dependencies (271 B)
@@ -495,5 +490,5 @@ For questions about this implementation:
 ---
 
 **Document version:** 1.0  
-**Last updated:** November 1, 2025  
+**Last updated:** Octoberr 31, 2025  
 **Status:** Production-ready 
