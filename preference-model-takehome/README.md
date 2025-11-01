@@ -1,7 +1,7 @@
 # RL Task Submission: Variance-Stabilized Dropout Implementation
 
-**Candidate:** AI Research Scientist (RL Background)  
-**Date:** November 1, 2025  
+**Candidate:** Eva Paunova, AI Research Scientist 
+**Date:** October 31, 2025  
 **Time Spent:** ~4 hours
 
 ## Task Overview
