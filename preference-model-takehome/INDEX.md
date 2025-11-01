@@ -1,4 +1,4 @@
-# Preference Model Take-Home Assignment
+# Preference Model 
 ## RL Task: Variance-Stabilized Dropout Implementation
 
 ---
