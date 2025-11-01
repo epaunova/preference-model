@@ -29,24 +29,24 @@ variance in activations that can slow convergence. The paper proposes a simple f
 - Randomly mask each unit with probability p
 - Scale surviving units by 1/(1-p) to maintain expected value
 - Formula: output = input * mask / (1-p)
-- Problem: Var(output) ≠ Var(input) even though E[output] = E[input]
+- Problem: Var(output) != Var(input) even though E[output] = E[input]
 
 **Variance-Stabilized Dropout:**
 - Still mask with probability p  
-- But scale by 1/√(1-p) instead of 1/(1-p)
+- But scale by 1/sqrt(1-p) instead of 1/(1-p)
 - This preserves BOTH mean AND variance
 - Result: More stable gradients, faster convergence
 
 **Mathematical Proof:**
-For input X with Var(X) = σ²:
+For input X with Var(X) = sigma^2:
 - Let M ~ Bernoulli(1-p) be the dropout mask
 - Standard dropout: Y = X * M / (1-p)
-  - E[Y] = E[X] ✓ (mean preserved)
-  - Var(Y) = σ² * (1-p) / (1-p)² = σ² / (1-p) ✗ (variance inflated!)
+  - E[Y] = E[X] (mean preserved)
+  - Var(Y) = sigma^2 * (1-p) / (1-p)^2 = sigma^2 / (1-p) (variance inflated!)
   
-- Variance-stabilized: Y = X * M / √(1-p)
-  - E[Y] = E[X] * (1-p) / √(1-p) = E[X] * √(1-p) (mean scaled by √(1-p))
-  - Var(Y) = σ² * (1-p) / (1-p) = σ² ✓ (variance preserved!)
+- Variance-stabilized: Y = X * M / sqrt(1-p)
+  - E[Y] = E[X] * (1-p) / sqrt(1-p) = E[X] * sqrt(1-p) (mean scaled by sqrt(1-p))
+  - Var(Y) = sigma^2 * (1-p) / (1-p) = sigma^2 (variance preserved!)
 
 Wait, the mean isn't preserved exactly... but variance IS preserved, which is what matters for 
 gradient stability. The slight mean scaling is typically absorbed by batch normalization or learned biases.
@@ -56,9 +56,9 @@ gradient stability. The slight mean scaling is typically absorbed by batch norma
 Your colleague started implementing this but made a mistake. The file `dropout.py` contains a buggy 
 `VarianceStabilizedDropout` class. Fix it so that:
 
-1. ✅ Variance is preserved (within 10% tolerance when tested with 10,000 samples)
-2. ✅ Works correctly in both training and evaluation modes
-3. ✅ All tests in `test_dropout.py` pass
+1. Variance is preserved (within 10% tolerance when tested with 10,000 samples)
+2. Works correctly in both training and evaluation modes
+3. All tests in `test_dropout.py` pass
 
 **Files provided:**
 - `dropout.py` - Contains buggy implementation (YOU MUST FIX THIS)
@@ -173,10 +173,10 @@ def test_variance_preservation():
         print(f"  Variance error: {var_error:.1%} (tolerance: {tolerance:.0%})")
         
         if var_error > tolerance:
-            print(f"  ❌ FAILED - Variance not preserved!")
+            print(f"  FAILED - Variance not preserved!")
             all_passed = False
         else:
-            print(f"  ✅ PASSED")
+            print(f"  PASSED")
     
     return all_passed
 
@@ -197,10 +197,10 @@ def test_eval_mode():
     output = dropout(x)
     
     if not np.allclose(output, x):
-        print("❌ FAILED - Dropout should be identity in eval mode")
+        print("FAILED - Dropout should be identity in eval mode")
         return False
     
-    print("✅ PASSED - Eval mode works correctly")
+    print("PASSED - Eval mode works correctly")
     return True
 
 
@@ -226,10 +226,10 @@ def test_training_mode():
     print(f"Zero ratio: {zero_ratio:.2%} (expected: {expected_zero_ratio:.0%})")
     
     if abs(zero_ratio - expected_zero_ratio) > 0.1:
-        print("❌ FAILED - Dropout not applying correctly")
+        print("FAILED - Dropout not applying correctly")
         return False
     
-    print("✅ PASSED - Training mode works correctly")
+    print("PASSED - Training mode works correctly")
     return True
 
 
@@ -244,11 +244,11 @@ if __name__ == "__main__":
     
     print("\\n" + "=" * 70)
     if passed_variance and passed_eval and passed_train:
-        print("🎉 ALL TESTS PASSED! 🎉")
+        print("ALL TESTS PASSED!")
         print("=" * 70)
         sys.exit(0)
     else:
-        print("❌ SOME TESTS FAILED")
+        print("SOME TESTS FAILED")
         print("=" * 70)
         print("\\nHint: Standard dropout uses scale = 1/(1-p) to preserve mean.")
         print("Variance-stabilized dropout needs scale = 1/sqrt(1-p) to preserve variance.")
@@ -310,7 +310,7 @@ def grade_solution(workspace_dir: Path) -> dict:
         if result.returncode == 0:
             return {
                 'passed': True,
-                'feedback': 'All tests passed! Implementation correctly preserves variance. ✅',
+                'feedback': 'All tests passed! Implementation correctly preserves variance.',
                 'output': result.stdout
             }
         else:
@@ -383,8 +383,8 @@ class VarianceStabilizedDropout:
         mask = np.random.binomial(1, keep_prob, size=x.shape)
         
         # FIXED: Use sqrt scaling to preserve variance
-        # Variance = σ² * (1-p) * scale²
-        # For Variance = σ², we need: (1-p) * scale² = 1
+        # Variance = sigma^2 * (1-p) * scale^2
+        # For Variance = sigma^2, we need: (1-p) * scale^2 = 1
         # Therefore: scale = 1/sqrt(1-p)
         scale = 1.0 / np.sqrt(keep_prob)
         
@@ -435,8 +435,15 @@ if __name__ == "__main__":
             f.write(CORRECT_SOLUTION)
         
         result = grade_solution(workspace)
-        print(f"Result: {'PASSED ✅' if result['passed'] else 'FAILED'}")
+        print(f"Result: {'PASSED' if result['passed'] else 'FAILED'}")
         print(f"Feedback: {result['feedback']}")
         if result['output']:
             print("\nOutput:")
             print(result['output'])
+```
+
+---
+
+## FILE 2: requirements.txt
+```
+numpy>=1.20.0
