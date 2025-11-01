@@ -3,7 +3,7 @@
 
 ---
 
-## 📋 Start Here
+## Start Here
 
 **New to this submission?** → Read `QUICKSTART.md` (2 min)  
 **Want quick overview?** → Read `SUBMISSION_SUMMARY.md` (5 min)  
@@ -17,7 +17,7 @@ python variance_dropout_task.py
 
 ---
 
-## 📁 Files Guide
+## Files Guide
 
 ### Essential Files
 - **variance_dropout_task.py** - Complete task implementation (the actual submission)
@@ -27,7 +27,7 @@ python variance_dropout_task.py
 
 ---
 
-## 🎯 What This Is
+## What This Is
 
 An RL training task where language models learn to:
 1. Understand a research paper concept (variance-stabilized dropout)
@@ -50,7 +50,7 @@ An RL training task where language models learn to:
 
 ---
 
-## 📊 Quick Stats
+## Quick Stats
 
 - **Code:** ~300 lines (including tests, grader, docs)
 - **Dependencies:** numpy only
