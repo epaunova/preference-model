@@ -103,4 +103,3 @@ See:
 - **Quick overview:** `SUBMISSION_SUMMARY.md`  
 - **Requirements check:** `CHECKLIST.md`
 
-Or contact: ai@xor.ai
