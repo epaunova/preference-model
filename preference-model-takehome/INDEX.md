@@ -3,11 +3,11 @@
 
 ---
 
-## Start Here
+##  Start Here
 
-**New to this submission?** → Read `QUICKSTART.md` (2 min)  
-**Want quick overview?** → Read `SUBMISSION_SUMMARY.md` (5 min)  
-**Need full details?** → Read `README.md` (15 min)
+**New to this submission?** - Read `QUICKSTART.md` (2 min)  
+**Want quick overview?** - Read `SUBMISSION_SUMMARY.md` (5 min)  
+**Need full details?** - Read `README.md` (15 min)
 
 **To run the task:**
 ```bash
@@ -17,17 +17,24 @@ python variance_dropout_task.py
 
 ---
 
-## Files Guide
+##  Files Guide
 
 ### Essential Files
 - **variance_dropout_task.py** - Complete task implementation (the actual submission)
 - **README.md** - Full documentation with rationale and design decisions
 - **requirements.txt** - Dependencies (numpy only)
 
+### Supporting Documentation
+- **QUICKSTART.md** - How to run and integrate (5 min read)
+- **SUBMISSION_SUMMARY.md** - One-page overview (3 min read)
+- **CHECKLIST.md** - Verification against requirements
+- **SUBMISSION_MESSAGE.md** - Email template for submission
+- **DEMO_SCRIPT.md** - Presentation guide if doing live demo
+- **INDEX.md** - This file
 
 ---
 
-## What This Is
+##  What This Is
 
 An RL training task where language models learn to:
 1. Understand a research paper concept (variance-stabilized dropout)
@@ -40,17 +47,17 @@ An RL training task where language models learn to:
 
 ---
 
-## Key Features
+##  Key Features
 
-- **Scientific concept** - Neural network training stability
-- **10-40% difficulty** - Subtle bug, requires math understanding
-- **Clear grading** - Automated statistical tests
-- **Educational value** - Teaches paper → code implementation
-- **Production ready** - Fully documented, tested, calibrated
+-  **Scientific concept** - Neural network training stability
+-  **10-40% difficulty** - Subtle bug, requires math understanding
+-  **Clear grading** - Automated statistical tests
+-  **Educational value** - Teaches paper - code implementation
+-  **Production ready** - Fully documented, tested, calibrated
 
 ---
 
-## Quick Stats
+##  Quick Stats
 
 - **Code:** ~300 lines (including tests, grader, docs)
 - **Dependencies:** numpy only
@@ -58,4 +65,36 @@ An RL training task where language models learn to:
 - **Task type:** Debugging + mathematical reasoning
 
 ---
+
+##  For Reviewers
+
+### 5-Minute Review
+1. Read `SUBMISSION_SUMMARY.md`
+2. Run `python variance_dropout_task.py`
+3. Watch buggy fail (43% error) - correct pass (0.1% error)
+
+### 15-Minute Review
+1. Read `README.md` sections on difficulty calibration
+2. Review task prompt in code
+3. Check grading logic
+4. Verify against `CHECKLIST.md`
+
+### Integration
+- See `QUICKSTART.md` for code examples
+- Task is self-contained in single file
+- Easy to adapt for different model APIs
+
+---
+
+##  Questions?
+
+Check:
+- Technical details - `README.md`
+- Quick answers - `SUBMISSION_SUMMARY.md`
+- Integration - `QUICKSTART.md`
+- Requirements - `CHECKLIST.md`
+
+
+---
+
 
