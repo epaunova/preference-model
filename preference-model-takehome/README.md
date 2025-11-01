@@ -2,7 +2,6 @@
 
 **Candidate:** Eva Paunova, AI Research Scientist   
 **Date:** October 31, 2025  
-**Time Spent:** ~4 hours
 
 ## Task Overview
 
