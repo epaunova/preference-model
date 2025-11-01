@@ -95,13 +95,6 @@ print(f"Pass: {result['passed']}")
 print(f"Feedback: {result['feedback']}")
 ```
 
-## What Makes This Task Great
-
-1. **Real research concept** - Variance stabilization in dropout
-2. **Subtle bug** - Only sqrt() missing from scaling factor  
-3. **Clear validation** - Statistical tests show 43% error → 0.1% error
-4. **Educational** - Teaches mean vs variance preservation
-5. **Well-calibrated** - 10-40% expected pass rate
 
 ## Questions?
 
