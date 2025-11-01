@@ -46,12 +46,12 @@ preference-model-takehome/
 
 ## For Reviewers
 
-### Quick Review 
+### Quick Review (5 min)
 1. Read `SUBMISSION_SUMMARY.md` - understand the task
 2. Run `python variance_dropout_task.py` - see it work
 3. Check difficulty calibration in output
 
-### Deep Review 
+### Deep Review (15 min)
 1. Read `README.md` - full rationale
 2. Review task prompt in code
 3. Check grading logic
@@ -94,7 +94,6 @@ result = grade_solution(workspace)
 print(f"Pass: {result['passed']}")
 print(f"Feedback: {result['feedback']}")
 ```
-
 
 ## Questions?
 
