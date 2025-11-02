@@ -42,6 +42,26 @@ python variance_dropout_task.py
 
 This shows the buggy implementation failing and the correct implementation passing.
 
+## Validation Results Summary
+
+**Empirical Pass Rate:** 26.7% (4/15 attempts with Claude Opus 4.1)  
+**Target Range:** 10-40%  
+**Status:** Within target range
+
+| Metric | Value |
+|--------|-------|
+| Model Tested | Claude Opus 4.1 |
+| Total Runs | 15 |
+| Passed | 4 (26.7%) |
+| Failed | 11 (73.3%) |
+| Pass Examples | 0.1-0.4% variance error |
+| Fail Examples | 15-44% variance error |
+| Avg Time/Run | 16.9 seconds |
+
+**Result:** Task difficulty is properly calibrated for RL training.
+
+*See [VALIDATION_RESULTS.md](./preference-model-takehome/VALIDATION_RESULTS.md) for detailed attempt-by-attempt results.*
+
 ## Empirical Validation with Claude API
 
 To validate that the task is properly calibrated (10-40% success rate), run it against Claude multiple times.
