@@ -1,5 +1,6 @@
 # Core dependency for the task
 numpy>=1.20.0
+anthropic>=0.28.0
 
 # For testing with actual LLMs (optional, not part of task execution)
 # anthropic>=0.40.0
