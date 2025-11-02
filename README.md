@@ -295,7 +295,7 @@ The task is calibrated for 10-40% success rate through:
 
 ### Expected Performance by Model Capability
 
-**Pass Rate Estimation Method:**  
+**Pass Rate Method:**  
 The 10-40% range is derived from difficulty analysis: 6 plausible incorrect formulas vs 1 correct solution, combined with the clear performance gap (buggy: 43% error, correct: 0.1% error). Empirical validation confirms 26.7% success rate (within target range).
 
 - **GPT-3.5 / Weak models (0-10%):** 
