@@ -1,8 +1,13 @@
 # Variance-Stabilized Dropout: RL Task for ML Researcher Training
 
-Author: Eva Paunova, AI Research Scientist
-
-Date: October 31, 2025
+**Candidate:** Eva Paunova, AI Research Scientist (RL Background)  
+**Date:** October 31, 2025  
+**Time Spent:** 4 hours breakdown:
+- Concept selection & research: 45 min
+- Task design & bug calibration: 1 hour
+- Implementation (code + tests): 1.5 hours
+- Validation & testing: 45 min
+- Documentation: 30 min
 
 ## Overview
 
