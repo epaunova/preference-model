@@ -290,12 +290,18 @@ def grade_solution(workspace_dir: Path) -> dict:
                 }
     
     # Sanity check: implementation should have sqrt
-    if 'sqrt' not in impl_code.lower() and '**' not in impl_code and '0.5' not in impl_code:
-        return {
-            'passed': False,
-            'feedback': 'Implementation appears incorrect. Variance stabilization requires sqrt in the scaling factor.',
-            'output': ''
-        }
+    import re
+
+has_sqrt = 'sqrt' in impl_code.lower()
+has_power_half = re.search(r'power\s*\([^)]*-?0\.5', impl_code) or re.search(r'power\s*\([^)]*-?1/2', impl_code)
+has_exponent = '**' in impl_code and ('-0.5' in impl_code or '-1/2' in impl_code)
+
+if not (has_sqrt or has_power_half or has_exponent):
+    return {
+        'passed': False,
+        'feedback': 'Implementation appears incorrect. Variance stabilization requires sqrt or np.power with -0.5/-1/2 exponent in the scaling factor.',
+        'output': ''
+    }
     
     # Run tests
     try:
