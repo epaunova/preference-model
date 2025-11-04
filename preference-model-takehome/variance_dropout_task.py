@@ -274,10 +274,6 @@ def grade_solution(workspace_dir: Path) -> dict:
             'output': ''
         }
     
-    # Read implementation
-    with open(dropout_path) as f:
-        impl_code = f.read()
-    
     # Check test wasn't modified
     if test_path.exists():
         with open(test_path) as f:
@@ -289,7 +285,7 @@ def grade_solution(workspace_dir: Path) -> dict:
                     'output': ''
                 }
     
-    # Run tests
+    # Run tests - test suite validates correctness
     try:
         result = subprocess.run(
             [sys.executable, str(test_path)],
