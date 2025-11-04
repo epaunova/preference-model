@@ -289,8 +289,6 @@ def grade_solution(workspace_dir: Path) -> dict:
                     'output': ''
                 }
     
-  
-    
     # Run tests
     try:
         result = subprocess.run(
