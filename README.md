@@ -1,11 +1,11 @@
-# RL Variance-Stabilized Dropout Implementation
+# RL for LLM training Variance-Stabilized Dropout Implementation
 
 **Author:** Eva Paunova, AI Research Scientist   
 
 
 ## Overview
 
-This submission contains an RL task for ML researcher/engineer training that teaches models to:
+This contains an RL task for ML researcher/engineer training that teaches models to:
 - Understand and implement techniques from research papers
 - Debug subtle mathematical errors in ML code
 - Apply statistical validation to neural network components
