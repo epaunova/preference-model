@@ -1,4 +1,4 @@
-#File Navigation Guide
+# File Navigation Guide
 
 ## Core Files
 
