@@ -1,7 +1,7 @@
 # Technical Design Document
 ## Variance-Stabilized Dropout: RL Task Implementation
 
-**Author:** Eva Paunova, AI Research Scientist   
+**Author:** Eva Paunova, ML Engineer   
 **Date:** October 31, 2025  
 
 ---
